@@ -1,29 +1,34 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter, Output } from '@angular/core';
 import { CardData } from './card/card-data';
+import {GameState} from './game.game-state'
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class GameService {
 
+  public static readonly STATE_CHANGE:string = 'STATE_CHANGE';
+
   cards: CardData[];
   status: string;
   message: string;
-  state: number;
+  state: string;
   card1: CardData;
   card2: CardData;
   score: number = 0;
   numPairs: number = 2;
 
+  @Output() stateChange: EventEmitter<any> = new EventEmitter();
+
   constructor() {
     this.cards = [];
     this.message = 'Click Play to start';
-    this.state = 0;
     this.card1 = null;
     this.card2 = null;
-    this.state = 0;
     this.score = 0;
     this.initCards();
+    this.setState(GameState.READY_TO_START);
   }
 
   initCards() {
@@ -39,12 +44,10 @@ export class GameService {
     }
   }
 
-  // initGame() {
-  //   console.log('START GAME');
-  //   this.shuffleCards();
-  //   this.state = 0;
-
-  // }
+  private setState(state: string) {
+    this.state = state;
+    this.stateChange.emit(state);
+  }
 
   revealAll() {
     this.cards.forEach((card) => {
@@ -63,7 +66,7 @@ export class GameService {
     this.shuffleCards();
     this.revealAll();
     this.score = 0;
-    this.state = 1;
+    this.setState(GameState.AWAITING_FIRST_MOVE);
   }
 
   shuffleCards() {
@@ -76,15 +79,15 @@ export class GameService {
   }
 
   makeMove(card: CardData) {
-    if (this.state === 0) {
+    if (this.state === GameState.READY_TO_START) {
       console.log('We havent started yet!!!!');
-    } else if (this.state === 1) {
+    } else if (this.state === GameState.AWAITING_FIRST_MOVE) {
       // We are expecting first card in a pair
       this.card1 = card;
       card.state = 1;
       console.log('Now select another card');
-      this.state = 2;
-    } else if (this.state === 2) {
+      this.setState(GameState.AWAITING_SECOND_MOVE);
+    } else if (this.state === GameState.AWAITING_SECOND_MOVE) {
       this.card2 = card;
       card.state = 1;
       if (this.card1.image === this.card2.image) {
@@ -92,7 +95,7 @@ export class GameService {
         // Set the cards to mathed (state 2) set game status to 1 (awaiting first card)
         this.card1.state = 2;
         this.card2.state = 2;
-        this.state = 1;
+        this.setState(GameState.AWAITING_FIRST_MOVE);
         this.score ++;
 
         if (this.score === this.numPairs) {
@@ -103,7 +106,7 @@ export class GameService {
         console.log('Nope start again');
         this.card1.state = 0;
         this.card2.state = 0;
-        this.state = 1;
+        this.setState(GameState.AWAITING_FIRST_MOVE);
       }
     }
     console.log();
@@ -111,7 +114,7 @@ export class GameService {
 
   gameComplete() {
     console.log('You mathed them all!!!!');
-    this.state = 3;
+    this.setState(GameState.COMPLETE);
   }
 
 }

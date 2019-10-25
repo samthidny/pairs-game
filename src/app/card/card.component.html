@@ -1,5 +1,4 @@
 <div class="app-card" [ngClass]="{'revealed': card.state===1, 'hidden': card.state===0, 'matched': card.state===2}" ng-class="" (click)="clickHandler()">
-    <p>State: {{card.state}}</p>
     <img src="/assets/marvel/{{card.image}}.jpg" />
 
 </div>

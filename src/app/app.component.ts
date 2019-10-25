@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { GameService } from './game.service';
 import { CardData } from './card/card-data';
+import { GameState } from './game.game-state';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { CardData } from './card/card-data';
 })
 export class AppComponent {
   title = 'pairs-game';
-
+  message: string = '';
   cards: CardData[];
   gameService: GameService;
   uiDisabled: Boolean = false;
@@ -17,18 +18,23 @@ export class AppComponent {
   constructor(gameService: GameService) {
     this.cards = gameService.cards;
     this.gameService = gameService;
+    this.gameService.stateChange.subscribe(() => {
+      this.updateMessage();
+    });
+    this.message = gameService.message;
   }
 
   startGameClick() {
     console.log('start game');
     // if weve just finished a game, hide the cards for a second and then start
-    if (this.gameService.state === 3) {
+    if (this.gameService.state === GameState.COMPLETE) {
       this.gameService.hideAll();
       setTimeout(() => {
         this.gameService.startGame();
         this.peekAtCards();
       }, 2000);
     } else {
+      // First game
       this.gameService.startGame();
       this.peekAtCards();
     }
@@ -47,8 +53,8 @@ export class AppComponent {
       return;
     }
 
-    if (this.gameService.state === 2) {
-      // Reveal card and then delay final decision
+    if (this.gameService.state === GameState.AWAITING_SECOND_MOVE) {
+      // Reveal card for a few seconds and then show win or lose
       card.state = 1;
       this.uiDisabled = true;
       setTimeout(() => {
@@ -63,5 +69,17 @@ export class AppComponent {
   makeMove(card: CardData) {
     console.log('App makeMove ' + card.image);
     this.gameService.makeMove(card);
+  }
+
+  updateMessage() {
+    console.log('APP updateMessage ' + this.gameService.state);
+    switch (this.gameService.state) {
+      case GameState.READY_TO_START: this.message = 'Click Start'; break;
+      case GameState.AWAITING_FIRST_MOVE: this.message = 'Pick a card!'; break;
+      case GameState.AWAITING_SECOND_MOVE: this.message = 'Try and match that card'; break;
+      case GameState.COMPLETE: this.message = 'Well done you matched them all.  Click start to play again.'; break;
+    }
+
+    console.log('message updated to ' + this.message);
   }
 }
