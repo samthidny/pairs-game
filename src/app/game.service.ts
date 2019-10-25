@@ -17,7 +17,7 @@ export class GameService {
   card1: CardData;
   card2: CardData;
   score: number = 0;
-  numPairs: number = 2;
+  numPairs: number = 4;
 
   @Output() stateChange: EventEmitter<any> = new EventEmitter();
 
@@ -78,15 +78,17 @@ export class GameService {
     });
   }
 
-  makeMove(card: CardData) {
+  makeMove(card: CardData): number {
     if (this.state === GameState.READY_TO_START) {
       console.log('We havent started yet!!!!');
+      return -1;
     } else if (this.state === GameState.AWAITING_FIRST_MOVE) {
       // We are expecting first card in a pair
       this.card1 = card;
       card.state = 1;
       console.log('Now select another card');
       this.setState(GameState.AWAITING_SECOND_MOVE);
+      return -1;
     } else if (this.state === GameState.AWAITING_SECOND_MOVE) {
       this.card2 = card;
       card.state = 1;
@@ -102,11 +104,14 @@ export class GameService {
           this.gameComplete();
         }
 
+        return 1;
+
       } else {
         console.log('Nope start again');
         this.card1.state = 0;
         this.card2.state = 0;
         this.setState(GameState.AWAITING_FIRST_MOVE);
+        return 0;
       }
     }
     console.log();

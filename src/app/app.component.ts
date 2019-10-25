@@ -32,7 +32,7 @@ export class AppComponent {
       setTimeout(() => {
         this.gameService.startGame();
         this.peekAtCards();
-      }, 2000);
+      }, 1000);
     } else {
       // First game
       this.gameService.startGame();
@@ -68,7 +68,18 @@ export class AppComponent {
 
   makeMove(card: CardData) {
     console.log('App makeMove ' + card.image);
-    this.gameService.makeMove(card);
+    const result = this.gameService.makeMove(card);
+    if (result === 1) {
+      this.flashMessage('WELL DONE!');
+    }
+  }
+
+  // shows a message briefly and then return to game state message;
+  flashMessage(message) {
+    this.message = message;
+    setTimeout(() => {
+      this.updateMessage();
+    }, 2000);
   }
 
   updateMessage() {
