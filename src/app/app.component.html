@@ -1,9 +1,9 @@
 <div>
-
-  <h1>PAIRS GAME</h1>
-  <h2>MATCHES {{gameService.score}}</h2>
-  <h2>{{gameService.state}}</h2>
+  <span>GAME STATE: {{gameService.state}}</span>
   <button (click)="startGameClick()">START GAME</button>
+  <button (click)="gameService.revealAll()">REVEAL ALL</button>
+  <button (click)="gameService.hideAll()">HIDE ALL</button>
+  
   <div *ngFor="let card of cards">
     <app-card [card]=card (cardClick)=cardClicked($event)></app-card>
   </div>

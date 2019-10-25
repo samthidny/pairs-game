@@ -12,6 +12,7 @@ export class AppComponent {
 
   cards: CardData[];
   gameService: GameService;
+  uiDisabled: Boolean = false;
 
   constructor(gameService: GameService) {
     this.cards = gameService.cards;
@@ -20,11 +21,43 @@ export class AppComponent {
 
   startGameClick() {
     console.log('start game');
-    this.gameService.startGame();
+    // if weve just finished a game, hide the cards for a second and then start
+    if (this.gameService.state === 3) {
+      this.gameService.hideAll();
+      setTimeout(() => {
+        this.gameService.startGame();
+        this.peekAtCards();
+      }, 2000);
+    } else {
+      this.gameService.startGame();
+      this.peekAtCards();
+    }
+
   }
 
-  cardClicked(card:CardData) {
-    this.makeMove(card);
+  peekAtCards() {
+    setTimeout(() => {
+      this.gameService.hideAll();
+    }, 2000);
+  }
+
+  cardClicked(card: CardData) {
+    if (this.uiDisabled) {
+      console.log('NOT READY YET!!! UIDISABLED');
+      return;
+    }
+
+    if (this.gameService.state === 2) {
+      // Reveal card and then delay final decision
+      card.state = 1;
+      this.uiDisabled = true;
+      setTimeout(() => {
+        this.makeMove(card);
+        this.uiDisabled = false;
+      }, 500);
+    } else {
+      this.makeMove(card);
+    }
   }
 
   makeMove(card: CardData) {

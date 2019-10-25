@@ -13,42 +13,57 @@ export class GameService {
   card1: CardData;
   card2: CardData;
   score: number = 0;
-  numPairs: number = 4;
+  numPairs: number = 2;
 
   constructor() {
     this.cards = [];
-    this.initGame();
     this.message = 'Click Play to start';
     this.state = 0;
     this.card1 = null;
     this.card2 = null;
     this.state = 0;
     this.score = 0;
+    this.initCards();
   }
 
-  initGame() {
-    console.log('START GAME');
+  initCards() {
+    this.cards.length = 0;
 
     for (let i = 0; i < this.numPairs; i++) {
       for (let p = 0; p < 2; p++) {
         const card = new CardData();
         card.image = i + 1;
+        card.state = 0;
         this.cards.push(card);
       }
     }
-
-    this.shuffleCards();
-
   }
 
-  startGame() {
-    this.score = 0;
-    this.state = 1;
+  // initGame() {
+  //   console.log('START GAME');
+  //   this.shuffleCards();
+  //   this.state = 0;
 
-    // Turn over all cards so they are not showing
+  // }
+
+  revealAll() {
+    this.cards.forEach((card) => {
+      card.state = 1;
+    });
+  }
+
+  hideAll() {
     this.cards.forEach((card) => {
       card.state = 0;
     });
+  }
+
+  // shuffle and show all the cards
+  startGame() {
+    this.shuffleCards();
+    this.revealAll();
+    this.score = 0;
+    this.state = 1;
   }
 
   shuffleCards() {
@@ -80,7 +95,7 @@ export class GameService {
         this.state = 1;
         this.score ++;
 
-        if(this.score === this.numPairs) {
+        if (this.score === this.numPairs) {
           this.gameComplete();
         }
 
