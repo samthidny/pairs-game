@@ -18,6 +18,7 @@ export class GameService {
   card2: CardData;
   score: number = 0;
   numPairs: number = 4;
+  gos: number = 0;
 
   @Output() stateChange: EventEmitter<any> = new EventEmitter();
 
@@ -49,24 +50,19 @@ export class GameService {
     this.stateChange.emit(state);
   }
 
-  revealAll() {
-    this.cards.forEach((card) => {
-      card.state = 1;
-    });
+  // shuffle and show all the cards
+  startGame() {
+    this.shuffleCards();
+    this.gos = 0;
+    this.score = 0;
+    // GAME READY
+    this.setState(GameState.AWAITING_FIRST_MOVE);
   }
 
   hideAll() {
     this.cards.forEach((card) => {
       card.state = 0;
     });
-  }
-
-  // shuffle and show all the cards
-  startGame() {
-    this.shuffleCards();
-    this.revealAll();
-    this.score = 0;
-    this.setState(GameState.AWAITING_FIRST_MOVE);
   }
 
   shuffleCards() {
@@ -90,6 +86,7 @@ export class GameService {
       this.setState(GameState.AWAITING_SECOND_MOVE);
       return -1;
     } else if (this.state === GameState.AWAITING_SECOND_MOVE) {
+      this.gos++;
       this.card2 = card;
       card.state = 1;
       if (this.card1.image === this.card2.image) {

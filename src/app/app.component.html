@@ -1,9 +1,7 @@
-<div>
-  <span>GAME STATE: {{gameService.state}}</span>
+<div style="background-color: red;">
+  <span>GAME STATE: {{gameService.state}} GO'S {{gameService.gos}}</span>
+
   <button (click)="startGameClick()">START GAME</button>
   <h1>{{message}}</h1>
-  <div *ngFor="let card of cards">
-    <app-card [card]=card (cardClick)=cardClicked($event)></app-card>
-  </div>
-
+  <app-table [cards]=cards></app-table>
 </div>

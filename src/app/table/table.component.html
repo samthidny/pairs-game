@@ -1,0 +1,5 @@
+<div class="table-holder" style="border: 5px solid green;" >
+    <div *ngFor="let card of cards">
+        <app-card [card]=card (cardClick)=cardClicked($event)></app-card>
+    </div>
+</div>
