@@ -1,0 +1,98 @@
+{
+  "configVersion": 1,
+  "timestamp": 1573075563168,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main-es2015.4290eb0745d55c2d8964.js",
+        "/main-es5.4290eb0745d55c2d8964.js",
+        "/manifest.webmanifest",
+        "/polyfills-es2015.0ef207fb7b4761464817.js",
+        "/polyfills-es5.2b9ce34c123ac007a8ba.js",
+        "/runtime-es2015.e8a2810b3b08d6a1b6aa.js",
+        "/runtime-es5.e8a2810b3b08d6a1b6aa.js",
+        "/styles.3ff695c00d717f2d2a11.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/marvel/1.jpg",
+        "/assets/marvel/2.jpg",
+        "/assets/marvel/3.jpg",
+        "/assets/marvel/4.jpg",
+        "/assets/marvel/5.jpg",
+        "/assets/marvel/6.jpg",
+        "/assets/marvel/7.jpg",
+        "/assets/marvel/8.jpg",
+        "/assets/marvel/9.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/marvel/1.jpg": "bf1f5baaee0bee4de533c342d7d92acc3cfb69d1",
+    "/assets/marvel/2.jpg": "d6bd8837d4b6e85378953c0cc6a8a01ff8e3f502",
+    "/assets/marvel/3.jpg": "bd5d23f32521776b600faafff2fda2c2bc5b98e4",
+    "/assets/marvel/4.jpg": "cf5a5e776f7db3a5b33c94b773ff84c1ee3ae2ce",
+    "/assets/marvel/5.jpg": "7d515d5df13bab091b3dcbd761802cb7f6ec4e5c",
+    "/assets/marvel/6.jpg": "407a2f57026af01462527f1d6c82784a81ffd244",
+    "/assets/marvel/7.jpg": "c25db87df725f4cca01618edfd22ed9819861871",
+    "/assets/marvel/8.jpg": "b8e0a0914a6c5923c7d0331cbe95cf57ba40b744",
+    "/assets/marvel/9.jpg": "c24a84c0f83b4df2ddc138e8bc5e9db70fb47267",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/index.html": "be5993659f39a098a6cd664e78cd59d0f341dda2",
+    "/main-es2015.4290eb0745d55c2d8964.js": "4a870ac10a4c5e09f90a440fa26da3f41842695d",
+    "/main-es5.4290eb0745d55c2d8964.js": "565a4f5a19a9d471917f6fdbf016ebcb5a128751",
+    "/manifest.webmanifest": "462f1d06a83892e0602fc4b83bc0082aba2ecf64",
+    "/polyfills-es2015.0ef207fb7b4761464817.js": "cf5cbfa9134716054fb479ab21362146cdf1f2ff",
+    "/polyfills-es5.2b9ce34c123ac007a8ba.js": "45c51483238468881240579c3fdecd19144cff17",
+    "/runtime-es2015.e8a2810b3b08d6a1b6aa.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/runtime-es5.e8a2810b3b08d6a1b6aa.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/styles.3ff695c00d717f2d2a11.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
