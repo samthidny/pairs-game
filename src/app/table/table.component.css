@@ -1,11 +1,11 @@
 
 .table-holder {
     background-color: pink;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 1;
     
 }
 

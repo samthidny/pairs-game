@@ -17,7 +17,7 @@ export class GameService {
   card1: CardData;
   card2: CardData;
   score: number = 0;
-  numPairs: number = 4;
+  numPairs: number = 6;
   gos: number = 0;
 
   @Output() stateChange: EventEmitter<any> = new EventEmitter();
