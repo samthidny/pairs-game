@@ -6,12 +6,14 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { CardComponent } from './card/card.component';
 import { TableComponent } from './table/table.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    TableComponent
+    TableComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

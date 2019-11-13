@@ -1,7 +1,6 @@
 <div style="background-color: gray">
-  <span>GAME STATE: {{gameService.state}} GO'S {{gameService.gos}}</span>
-
-  <button (click)="startGameClick()">START GAME</button>
-  <h1>{{message}}</h1>
+  
+  <app-header></app-header>
+  
   <app-table [cards]=cards></app-table>
 </div>
