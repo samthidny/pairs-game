@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { GameService } from '../game.service';
 import { GameState } from '../game.game-state';
+import { stat } from 'fs';
 
 @Component({
   selector: 'app-header',
@@ -10,14 +11,20 @@ import { GameState } from '../game.game-state';
 export class HeaderComponent implements OnInit {
 
   gameService: GameService;
-  message: string = '';
+  message: string;
+  gameState: string;
+  showStart: boolean;
 
   constructor(gameService: GameService) {
     this.gameService = gameService;
-    this.gameService.stateChange.subscribe(() => {
-      this.updateMessage();
+    this.gameService.stateChange.subscribe((state: string) => {
+      this.stateChangeHandler(state);
     });
     this.message = gameService.message;
+
+    // initialise state
+    this.stateChangeHandler(gameService.state);
+
   }
 
   ngOnInit() {
@@ -46,9 +53,18 @@ export class HeaderComponent implements OnInit {
   //   }, 2000);
   // }
 
-  updateMessage() {
+  stateChangeHandler(state: string) {
+    this.updateControl(state);
+    this.updateMessage(state);
+  }
+
+  updateControl(state: string) {
+    this.showStart = (state === GameState.READY_TO_START || state === GameState.COMPLETE);
+  }
+
+  updateMessage(state: string) {
     console.log('APP updateMessage ' + this.gameService.state);
-    switch (this.gameService.state) {
+    switch (state) {
       case GameState.READY_TO_START: this.message = 'Click Start'; break;
       case GameState.AWAITING_FIRST_MOVE: this.message = 'Pick a card!'; break;
       case GameState.AWAITING_SECOND_MOVE: this.message = 'Try and match that card'; break;

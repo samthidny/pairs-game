@@ -2,7 +2,7 @@
   <span>GAME STATE: {{gameService.state}} GO'S {{gameService.gos}}</span>
 </div>
 
-<div class="control">
+<div class="control" *ngIf="showStart">
   <button (click)="startGameClick()">START GAME</button>
 </div>
 
