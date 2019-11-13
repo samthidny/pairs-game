@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1573673820891,
+  "timestamp": 1573682604617,
   "index": "/pairs-game/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "/pairs-game/favicon.ico",
         "/pairs-game/index.html",
-        "/pairs-game/main-es2015.df8158de131d4404f9b7.js",
-        "/pairs-game/main-es5.df8158de131d4404f9b7.js",
+        "/pairs-game/main-es2015.e5b69a328fb1109e2b1a.js",
+        "/pairs-game/main-es5.e5b69a328fb1109e2b1a.js",
         "/pairs-game/manifest.webmanifest",
         "/pairs-game/polyfills-es2015.0ef207fb7b4761464817.js",
         "/pairs-game/polyfills-es5.2b9ce34c123ac007a8ba.js",
@@ -67,9 +67,9 @@
     "/pairs-game/assets/marvel/8.jpg": "b8e0a0914a6c5923c7d0331cbe95cf57ba40b744",
     "/pairs-game/assets/marvel/9.jpg": "c24a84c0f83b4df2ddc138e8bc5e9db70fb47267",
     "/pairs-game/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/pairs-game/index.html": "213478f56a571013a8f369d796a9e614b6b5ab5c",
-    "/pairs-game/main-es2015.df8158de131d4404f9b7.js": "d280977ee35fba997f5b4e54dccac9ac13f39246",
-    "/pairs-game/main-es5.df8158de131d4404f9b7.js": "008f72fb949949ac60f4db15dbb41a75ace2c37d",
+    "/pairs-game/index.html": "cc668e043fbe74840effcc239e3dc1b564aaf0b3",
+    "/pairs-game/main-es2015.e5b69a328fb1109e2b1a.js": "2567cd6afb0fa4c8b883497ed280267808b3637e",
+    "/pairs-game/main-es5.e5b69a328fb1109e2b1a.js": "a4dea4464668ef84fb025d916259df4e7adec557",
     "/pairs-game/manifest.webmanifest": "462f1d06a83892e0602fc4b83bc0082aba2ecf64",
     "/pairs-game/polyfills-es2015.0ef207fb7b4761464817.js": "cf5cbfa9134716054fb479ab21362146cdf1f2ff",
     "/pairs-game/polyfills-es5.2b9ce34c123ac007a8ba.js": "45c51483238468881240579c3fdecd19144cff17",
