@@ -3,44 +3,83 @@
     margin: 5px;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (max-width: 370px) {
 
     .app-card {
-        width: 20px;
-        height: 20px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .hidden {
+        background-color: blue;
+    }
+    
+
+}
+
+@media only screen and (min-width: 370px) {
+
+    .app-card {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hidden {
+        background-color: red;
+    }
+    
+
+}
+
+@media only screen and (min-width: 570px) {
+
+    .app-card {
+        width: 160px;
+        height: 160px;
+    }
+
+    .hidden {
+        background-color: black;
     }
 
 }
 
-@media only screen and (min-width: 800px) {
-
-    .app-card {
-        width: 120px;
-        height: 120px;
-    }
-
-}
-
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 870px) {
 
     .app-card {
         width: 200px;
         height: 200px;
     }
 
+    .hidden {
+        background-color: red;
+    }
+
 }
 
+@media only screen and (min-width: 1070px) {
 
+    .app-card {
+        width: 220px;
+        height: 220px;
+    }
 
+    .hidden {
+        background-color: green;
+    }
 
+}
 
+img {
+    width: 100%;
+}
 
 .revealed {
     background-color: green;
 }
 
 .hidden {
-    background-color: grey;
+    /* background-color: grey; */
 }
 
 .hidden img {
