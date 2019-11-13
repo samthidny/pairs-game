@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { GameService } from '../game.service';
 import { GameState } from '../game.game-state';
-import { stat } from 'fs';
 
 @Component({
   selector: 'app-header',
