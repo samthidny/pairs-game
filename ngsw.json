@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1574280553387,
+  "timestamp": 1574284708021,
   "index": "/pairs-game/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "/pairs-game/favicon.ico",
         "/pairs-game/index.html",
-        "/pairs-game/main-es2015.eddf5cdfe076a456a22f.js",
-        "/pairs-game/main-es5.eddf5cdfe076a456a22f.js",
+        "/pairs-game/main-es2015.841d748f92a122623e8f.js",
+        "/pairs-game/main-es5.841d748f92a122623e8f.js",
         "/pairs-game/manifest.webmanifest",
         "/pairs-game/polyfills-es2015.0ef207fb7b4761464817.js",
         "/pairs-game/polyfills-es5.2b9ce34c123ac007a8ba.js",
@@ -40,11 +40,8 @@
         "/pairs-game/assets/marvel/4.jpg",
         "/pairs-game/assets/marvel/5.jpg",
         "/pairs-game/assets/marvel/6.jpg",
-        "/pairs-game/assets/marvel/7.jpg",
-        "/pairs-game/assets/marvel/8.jpg",
-        "/pairs-game/assets/marvel/9.jpg",
-        "/pairs-game/assets/marvel/logo.png",
-        "/pairs-game/logo.2d87c08c5c3958eeec8d.png"
+        "/pairs-game/assets/marvel/logo.jpg",
+        "/pairs-game/logo.4f9f126070a74b4cf9c6.jpg"
       ],
       "patterns": []
     }
@@ -59,21 +56,18 @@
     "/pairs-game/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "/pairs-game/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/pairs-game/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "/pairs-game/assets/marvel/1.jpg": "bf1f5baaee0bee4de533c342d7d92acc3cfb69d1",
+    "/pairs-game/assets/marvel/1.jpg": "9b105abe4872cc51b976a42762a43012fbee3159",
     "/pairs-game/assets/marvel/2.jpg": "d6bd8837d4b6e85378953c0cc6a8a01ff8e3f502",
     "/pairs-game/assets/marvel/3.jpg": "bd5d23f32521776b600faafff2fda2c2bc5b98e4",
     "/pairs-game/assets/marvel/4.jpg": "cf5a5e776f7db3a5b33c94b773ff84c1ee3ae2ce",
-    "/pairs-game/assets/marvel/5.jpg": "7d515d5df13bab091b3dcbd761802cb7f6ec4e5c",
-    "/pairs-game/assets/marvel/6.jpg": "407a2f57026af01462527f1d6c82784a81ffd244",
-    "/pairs-game/assets/marvel/7.jpg": "c25db87df725f4cca01618edfd22ed9819861871",
-    "/pairs-game/assets/marvel/8.jpg": "b8e0a0914a6c5923c7d0331cbe95cf57ba40b744",
-    "/pairs-game/assets/marvel/9.jpg": "c24a84c0f83b4df2ddc138e8bc5e9db70fb47267",
-    "/pairs-game/assets/marvel/logo.png": "36939ba920b537164c4b354899f75c786326ab4e",
+    "/pairs-game/assets/marvel/5.jpg": "091b0061716c6d90f7823f93ae8fee22e4dcd4f8",
+    "/pairs-game/assets/marvel/6.jpg": "4d91f870a3d25b966da4989a5d5dea7de212ed41",
+    "/pairs-game/assets/marvel/logo.jpg": "56f61b457dc187d704ddf7e602787e342f335dcf",
     "/pairs-game/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/pairs-game/index.html": "f06d30f3706f086b71428c57ca88f4d5eb869d76",
-    "/pairs-game/logo.2d87c08c5c3958eeec8d.png": "36939ba920b537164c4b354899f75c786326ab4e",
-    "/pairs-game/main-es2015.eddf5cdfe076a456a22f.js": "1b91817afad22d1780164c5964d23b2bde37be48",
-    "/pairs-game/main-es5.eddf5cdfe076a456a22f.js": "8396c827c0f88e5dba10bfa11d7ede03c0b82d54",
+    "/pairs-game/index.html": "688e4624fda382ad5e5304288e1a9b0c82df6c24",
+    "/pairs-game/logo.4f9f126070a74b4cf9c6.jpg": "56f61b457dc187d704ddf7e602787e342f335dcf",
+    "/pairs-game/main-es2015.841d748f92a122623e8f.js": "cf19a4f71cc40ff9354176250584d6ce18006156",
+    "/pairs-game/main-es5.841d748f92a122623e8f.js": "a84c93eb64cc70d461073960c110d253c45016fd",
     "/pairs-game/manifest.webmanifest": "462f1d06a83892e0602fc4b83bc0082aba2ecf64",
     "/pairs-game/polyfills-es2015.0ef207fb7b4761464817.js": "cf5cbfa9134716054fb479ab21362146cdf1f2ff",
     "/pairs-game/polyfills-es5.2b9ce34c123ac007a8ba.js": "45c51483238468881240579c3fdecd19144cff17",
