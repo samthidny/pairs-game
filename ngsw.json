@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1574284708021,
+  "timestamp": 1574287006213,
   "index": "/pairs-game/index.html",
   "assetGroups": [
     {
@@ -68,7 +68,7 @@
     "/pairs-game/logo.4f9f126070a74b4cf9c6.jpg": "56f61b457dc187d704ddf7e602787e342f335dcf",
     "/pairs-game/main-es2015.841d748f92a122623e8f.js": "cf19a4f71cc40ff9354176250584d6ce18006156",
     "/pairs-game/main-es5.841d748f92a122623e8f.js": "a84c93eb64cc70d461073960c110d253c45016fd",
-    "/pairs-game/manifest.webmanifest": "462f1d06a83892e0602fc4b83bc0082aba2ecf64",
+    "/pairs-game/manifest.webmanifest": "32627f9a590cddd253595e751f63f0fccf820456",
     "/pairs-game/polyfills-es2015.0ef207fb7b4761464817.js": "cf5cbfa9134716054fb479ab21362146cdf1f2ff",
     "/pairs-game/polyfills-es5.2b9ce34c123ac007a8ba.js": "45c51483238468881240579c3fdecd19144cff17",
     "/pairs-game/runtime-es2015.e8a2810b3b08d6a1b6aa.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
