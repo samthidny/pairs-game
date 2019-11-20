@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1574280216783,
+  "timestamp": 1574280553387,
   "index": "/pairs-game/index.html",
   "assetGroups": [
     {
@@ -70,7 +70,7 @@
     "/pairs-game/assets/marvel/9.jpg": "c24a84c0f83b4df2ddc138e8bc5e9db70fb47267",
     "/pairs-game/assets/marvel/logo.png": "36939ba920b537164c4b354899f75c786326ab4e",
     "/pairs-game/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/pairs-game/index.html": "eef8ed14b764e62d5159bd2fb035f2b02b85bc98",
+    "/pairs-game/index.html": "f06d30f3706f086b71428c57ca88f4d5eb869d76",
     "/pairs-game/logo.2d87c08c5c3958eeec8d.png": "36939ba920b537164c4b354899f75c786326ab4e",
     "/pairs-game/main-es2015.eddf5cdfe076a456a22f.js": "1b91817afad22d1780164c5964d23b2bde37be48",
     "/pairs-game/main-es5.eddf5cdfe076a456a22f.js": "8396c827c0f88e5dba10bfa11d7ede03c0b82d54",
