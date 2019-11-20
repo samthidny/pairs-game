@@ -12,9 +12,11 @@ export class TableComponent implements OnInit {
 
   @Input() cards: CardData[];
   gameService: GameService;
-  uiDisabled: boolean = false;
+  uiDisabled: boolean;
+  peekTime: number;
 
   constructor(gameService: GameService) {
+    this.peekTime = 3000;
     this.gameService = gameService;
     this.gameService.stateChange.subscribe((state: string) => {
       console.log('TABLE HEARD GAME STATE CHANGED ' + state);
@@ -66,7 +68,7 @@ export class TableComponent implements OnInit {
     this.revealAll();
     setTimeout(() => {
       this.hideAll();
-    }, 2000);
+    }, this.peekTime);
   }
 
   revealAll() {

@@ -1,6 +1,12 @@
 .app-card {
-    border: 1px solid black;
+    border: 3px solid white;
     margin: 5px;
+    border-radius: 10px;
+    background-color: red;
+    background-image: url('./../../assets/marvel/logo.png');
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 370px) {
@@ -11,7 +17,7 @@
     }
 
     .hidden {
-        background-color: blue;
+        /* background-color: blue; */
     }
     
 
@@ -25,7 +31,7 @@
     }
 
     .hidden {
-        background-color: red;
+        /* background-color: red; */
     }
     
 
@@ -39,7 +45,7 @@
     }
 
     .hidden {
-        background-color: black;
+        /* background-color: black; */
     }
 
 }
@@ -52,7 +58,7 @@
     }
 
     .hidden {
-        background-color: red;
+        /* background-color: red; */
     }
 
 }
@@ -65,7 +71,7 @@
     }
 
     .hidden {
-        background-color: green;
+        /* background-color: green; */
     }
 
 }
@@ -75,7 +81,7 @@ img {
 }
 
 .revealed {
-    background-color: green;
+    /* background-color: green; */
 }
 
 .hidden {

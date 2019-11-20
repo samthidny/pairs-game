@@ -1,6 +1,5 @@
 
 .table-holder {
-    background-color: pink;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
